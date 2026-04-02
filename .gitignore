@@ -1,5 +1,29 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+package-lock.json
+yarn.lock
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+
+# Production
+dist/
+dist-ssr/
+build/
+
+# Env files (DO NOT commit these)
+.env
+.env.local
+.env.*.local
+.env.production.local
+.env.development.local
+
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,18 +31,65 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
 
-# Editor directories and files
+# Temporary files
+*.local
+*.tmp
+*.temp
+
+# IDE / Editor
 .vscode/*
 !.vscode/extensions.json
-.idea
+!.vscode/settings.json
+!.vscode/tasks.json
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+*.iml
 .DS_Store
+*.sus
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE plugins
+!.vscode/extensions.json
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Vitest
+coverage/
+
+# Build outputs
+dist/
+build/
+out/
+
+# Misc
+.cache/
+.eslintcache
+.npmrc
