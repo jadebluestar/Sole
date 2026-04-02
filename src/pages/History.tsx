@@ -77,7 +77,7 @@ const History: React.FC = () => {
               <XAxis dataKey="date" tick={{ fontSize: 10 }} stroke="hsl(var(--text-muted))" />
               <YAxis domain={[0, 100]} tick={{ fontSize: 10 }} stroke="hsl(var(--text-muted))" />
               <Tooltip contentStyle={{ fontSize: 12, borderRadius: 8, border: '1px solid hsl(var(--border))' }} />
-              <Area y1={0} y2={40} fill="hsla(160,84%,39%,0.05)" />
+              
               <ReferenceLine y={40} stroke="hsl(var(--grade-safe))" strokeDasharray="3" strokeOpacity={0.4} />
               <ReferenceLine y={70} stroke="hsl(var(--grade-danger))" strokeDasharray="3" strokeOpacity={0.4} />
               <Line type="monotone" dataKey="heel" stroke="#DC2626" strokeWidth={1.5} dot={false} />
