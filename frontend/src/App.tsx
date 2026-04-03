@@ -16,7 +16,7 @@ import Checkin from "./pages/Checkin";
 import Care from "./pages/Care";
 import Clinic from "./pages/Clinic";
 import NotFound from "./pages/NotFound";
-
+import ModelCard from './components/ModelCard'
 const queryClient = new QueryClient();
 
 const App = () => (

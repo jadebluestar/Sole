@@ -88,14 +88,8 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground font-sans;
-    font-family: 'Inter', sans-serif;
-  }
+body {
+  @apply bg-white text-black font-sans;
 }
 
 @layer utilities {

@@ -4,7 +4,7 @@ import { useLang } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useAuth } from '@/contexts/AuthContext';
 import { Sun, Moon, LogOut, Shield } from 'lucide-react';
-
+import soleLogo from '../../../../assets/sole_logo.png';
 interface AppHeaderProps {
   title?: string;
   showBack?: boolean;
@@ -25,7 +25,8 @@ const AppHeader: React.FC<AppHeaderProps> = ({ title, showBack }) => {
               ←
             </button>
           )}
-          <span className="text-lg font-bold text-primary">Sole</span>
+          <span 
+          className="text-lg font-bold text-primary">Sole</span>
           <span className="text-xs text-text-muted flex items-center gap-1">
             <Shield size={10} />
             AES-256

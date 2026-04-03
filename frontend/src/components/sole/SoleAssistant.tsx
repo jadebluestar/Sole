@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, Send, X } from 'lucide-react';
 import { useLang } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
-import { DEMO_SCANS, DEMO_CHECKINS, DEMO_BASELINE } from '@/lib/mockData';
+import { DEMO_SCANS, DEMO_CHECKINS, DEMO_BASELINE, DEMO_PATIENT } from '@/lib/mockData';
 
 interface ChatMessage {
   role: 'user' | 'assistant';
@@ -27,7 +27,7 @@ const SoleAssistant: React.FC = () => {
   const generateResponse = (userMsg: string): string => {
     const lastScan = DEMO_SCANS[DEMO_SCANS.length - 1];
     const lastCheckin = DEMO_CHECKINS[DEMO_CHECKINS.length - 1];
-    const name = patient?.name?.split(' ')[0] || 'there';
+    const name = currentPatient?.name?.split(' ')[0] || 'there';
 
     if (userMsg.toLowerCase().includes('worse') || userMsg.toLowerCase().includes('बिगड़')) {
       return `${name}, your heel risk has risen from ${DEMO_SCANS[DEMO_SCANS.length - 3].heel} to ${lastScan.heel} over the last 3 scans. I'd recommend reducing standing time and scheduling a check with your doctor this week.`;
@@ -73,8 +73,7 @@ const SoleAssistant: React.FC = () => {
     }
   };
 
-  if (!patient) return null;
-
+  const currentPatient = patient || DEMO_PATIENT;
   const suggestions = [t('ask_worse'), t('ask_grade'), t('ask_doctor')];
 
   return (
