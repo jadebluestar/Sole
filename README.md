@@ -1,6 +1,4 @@
-![Sole Logo](assets/sole_logo.png)
-
-# Sole — Know before it shows
+# <img src="assets/sole_logo.png" width="40" height="40" style="margin-right: 10px;" /> Sole — Know before it shows
 
 Sole is a computer vision-based foot health monitoring system designed to identify early signs of diabetic foot ulcers. The system combines a lightweight deep learning model with a user-facing web interface to provide risk scores, visual heatmaps, and actionable insights for patients and clinicians.
 
@@ -167,9 +165,12 @@ Technical Stack
 ## Installation and Running
 
 ### Prerequisites
+
 * Python 3.9 or later
-* Node.js 18 or later
+* Node.js 18 or later (LTS recommended)
+* npm 9 or later
 * SQLite3 (included with Python)
+* Git
 
 ### Backend Setup
 
@@ -272,39 +273,47 @@ Sole is positioned as an early warning and continuous monitoring tool for patien
 ### Data Privacy
 
 Patient scan images and personal health information are stored locally in the SQLite database. For production deployment, implement:
+
 * End-to-end encryption for data at rest
 * HTTPS/TLS for data in transit
 * Role-based access control (RBAC) in the clinician interface
 * HIPAA-compliant audit logging
 * Secure authentication (OAuth2, multi-factor authentication)
-    grade3/
-    grade4/
-```
 
 ---
 
 ## Limitations
 
 * The model is trained on a limited dataset and may not generalize across all skin tones, lighting conditions, or foot deformities.
-* Predictions are not clinically validated and should not be used for diagnosis.
-* Camera-based inference is an approximation and does not replace pressure-sensing hardware.
+* Image-based predictions are approximations and do not replace clinical examination or pressure-sensing equipment.
+* Risk scores are calibrated for screening only and are not suitable for diagnosis.
+* The system is designed to complement, not replace, professional medical judgment.
 
 ---
 
 ## Future Work
 
 * Clinical validation with real-world patient data
-* Improved dataset diversity and size
-* Better calibration of risk scores
-* On-device inference optimization (TensorFlow.js)
-* Integration with healthcare providers
+* Improved model performance with larger, more diverse datasets
+* Mobile on-device inference optimization (ONNX Runtime, TensorFlow Lite)
+* Integration with electronic health record (EHR) systems
+* Expanded caregiver alert mechanisms
 
 ---
-## Architecture Diagram
-![Architecture Diagram](assets/architecture.png)
+
+## Support and Contributing
+
+For issues, feature requests, or contributions, please refer to the GitHub repository guidelines. The Sole project welcomes collaboration from clinicians, data scientists, and software engineers.
 
 ---
-## Notes
 
-Sole is intended as an early warning and monitoring tool. It is not a diagnostic system. Users are encouraged to consult medical professionals if high-risk indicators are observed.
+## License
+
+This project is provided as-is for research and educational purposes. For clinical deployment, appropriate regulatory review and compliance validation is required.
+
+---
+
+## Disclaimer
+
+Sole is intended as an early warning and continuous monitoring tool for diabetes patients. It is not a diagnostic device and should not be used for clinical decision-making in isolation. Predictions must be reviewed by qualified healthcare providers. Users are encouraged to consult medical professionals if high-risk indicators are observed.
 
